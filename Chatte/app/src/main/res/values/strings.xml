@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="bem_vindo_a_chatte">Bem vindo a Chatte!</string>
+    <string name="fa_a_o_login_para_continuar">Faça o login para continuar</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="entrar">Entrar</string>
+    <string name="crie_uma_conta">Crie uma conta</string>
+    <string name="crie_sua_conta">Crie sua conta</string>
+    <string name="adicionar_imagem">Adicionar imagem</string>
+    <string name="repita_a_senha">repita a senha</string>
+    <string name="senha">senha</string>
+    <string name="criar_conta">Criar conta</string>
+    <string name="nome">Nome</string>
+</resources>
