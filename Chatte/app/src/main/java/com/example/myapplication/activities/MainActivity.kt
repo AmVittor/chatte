@@ -37,7 +37,8 @@ class MainActivity : AppCompatActivity() {
         binding.imageSignOut.setOnClickListener{signOut()}
         binding.fabNewChat.setOnClickListener {
             startActivity(Intent(applicationContext, UsersActivity::class.java))
-        }    }
+        }
+    }
 
     private fun loadUserDetails(){
         binding.textName.text = preferenceManager.getString(constant.KEY_NAME)
@@ -59,8 +60,10 @@ class MainActivity : AppCompatActivity() {
         val documentReference: DocumentReference = database.collection(constant.KEY_COLLECTION_USERS).document(
             preferenceManager.getString(constant.KEY_USER_ID)!!
         )
-        documentReference.update(constant.KEY_FCM_TOKEN, token).addOnSuccessListener { unused ->
-        } .addOnFailureListener { e -> showToast("Erro ao atualizar o token") }
+        documentReference.update(constant.KEY_FCM_TOKEN, token)
+            .addOnFailureListener {
+                showToast("Erro ao atualizar o token")
+        }
     }
 
     private fun signOut(){

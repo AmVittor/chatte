@@ -9,10 +9,10 @@ import android.content.SharedPreferences
      private lateinit var sharedPreferences: SharedPreferences
     private val constants = Constants()
 
-
     fun preferenceManager(context: Context){
-       sharedPreferences = context.getSharedPreferences(constants.KEY_PREFERENCE_NAME, Context.MODE_PRIVATE)
-   }
+        sharedPreferences = context.getSharedPreferences(constants.KEY_PREFERENCE_NAME, Context.MODE_PRIVATE)
+    }
+
 
     fun putBoolean(key: String, value: Boolean){
        val editor: SharedPreferences.Editor = sharedPreferences.edit()

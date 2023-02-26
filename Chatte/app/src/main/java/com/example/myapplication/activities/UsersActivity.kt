@@ -3,6 +3,7 @@ package com.example.myapplication.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.core.app.ActivityCompat
 import com.example.myapplication.R
 import com.example.myapplication.adapters.UsersAdapter
 import com.example.myapplication.databinding.ActivityUsersBinding
@@ -12,7 +13,7 @@ import com.example.myapplication.utilities.PreferenceManager
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.QueryDocumentSnapshot
 
-class UsersActivity : AppCompatActivity() {
+class UsersActivity: AppCompatActivity() {
 
     private lateinit var binding: ActivityUsersBinding
     private var preferenceManager: PreferenceManager = PreferenceManager()
@@ -21,54 +22,54 @@ class UsersActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityUsersBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_users)
+        setContentView(binding.root)
         preferenceManager.preferenceManager(applicationContext)
         setListeners()
         getUsers()
     }
 
     private fun setListeners(){
-        binding.imageBack.setOnClickListener{finish()}
-
+        binding.imageBack.setOnClickListener{
+            ActivityCompat.finishAfterTransition(this)
+        }
     }
 
     private fun getUsers(){
         loading(true)
         val database: FirebaseFirestore = FirebaseFirestore.getInstance()
-        database.collection(constants.KEY_COLLECTION_USERS).get().addOnCompleteListener { task ->
-            loading(false)
-            val currentUserId: String = preferenceManager.getString(constants.KEY_USER_ID)!!
-            if(task.isSuccessful && task.getResult() != null){
-                val users: MutableList<User> = mutableListOf()
-                for (queryDocumentSnapshot: QueryDocumentSnapshot in task.getResult()){
-                    if(currentUserId.equals(queryDocumentSnapshot.id)){
-                        continue
+        database.collection(constants.KEY_COLLECTION_USERS)
+            .get()
+            .addOnCompleteListener { task ->
+                loading(false)
+                val currentuserId: String = preferenceManager.getString(constants.KEY_USER_ID)!!
+                if(task.isSuccessful && task.result != null){
+                    val users: MutableList<User> = mutableListOf()
+                    for (queryDocumentSnapshot: QueryDocumentSnapshot in task.result){
+                        if(currentuserId == queryDocumentSnapshot.id){
+                            continue
+                        }
+                        val user = User()
+                        user.name = queryDocumentSnapshot.getString(constants.KEY_NAME)!!
+                        user.email = queryDocumentSnapshot.getString(constants.KEY_EMAIL)!!
+                        user.image = queryDocumentSnapshot.getString(constants.KEY_IMAGE)!!
+                        user.token = queryDocumentSnapshot.getString(constants.KEY_FCM_TOKEN).toString()
+                        users.add(user)
                     }
-                    val user = User()
-                    user.name = queryDocumentSnapshot.getString(constants.KEY_NAME)!!
-                    user.email = queryDocumentSnapshot.getString(constants.KEY_EMAIL)!!
-                    user.image = queryDocumentSnapshot.getString(constants.KEY_IMAGE)!!
-                    user.token = queryDocumentSnapshot.getString(constants.KEY_FCM_TOKEN)!!
-                    users.add(user)
-                }
-                if(users.size > 0){
-                    val usersAdapter = UsersAdapter(users)
-                    binding.usersRecyclerView.setAdapter(usersAdapter)
-                    binding.usersRecyclerView.visibility = View.VISIBLE
-
+                    if (users.isNotEmpty()){
+                        val usersAdapter = UsersAdapter(users)
+                        binding.usersRecyclerView.adapter = usersAdapter
+                        binding.usersRecyclerView.visibility = View.VISIBLE
+                    } else{
+                        showErrorMessage()
+                    }
                 } else {
                     showErrorMessage()
                 }
-            }else {
-                showErrorMessage()
             }
-
-
-        }
     }
 
     private fun showErrorMessage(){
-        binding.textErrorMessage.text = String.format("%s", "Não há usuários")
+        binding.textErrorMessage.text = String.format("%s", "No user available")
         binding.textErrorMessage.visibility = View.VISIBLE
     }
 
@@ -79,5 +80,4 @@ class UsersActivity : AppCompatActivity() {
             binding.progressBar.visibility = View.INVISIBLE
         }
     }
-
 }

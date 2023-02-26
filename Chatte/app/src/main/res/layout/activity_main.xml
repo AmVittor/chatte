@@ -59,7 +59,9 @@
         android:background="@drawable/background_content_bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageProfile"
-        />
+        >
+
+    </FrameLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
        android:id="@+id/fabNewChat"
@@ -73,6 +75,5 @@
         android:backgroundTint="@color/primary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:tint="@color/white"
-        />
+        android:tint="@color/white" />
 </androidx.constraintlayout.widget.ConstraintLayout>
