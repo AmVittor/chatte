@@ -8,12 +8,14 @@ class User() : Parcelable {
     var image: String = ""
     var email: String = ""
     var token: String = ""
+    var id: String = ""
 
     constructor(parcel: Parcel) : this() {
         name = parcel.readString() ?: ""
         image = parcel.readString() ?: ""
         email = parcel.readString() ?: ""
         token = parcel.readString() ?: ""
+        id = parcel.readString() ?: ""
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
@@ -21,6 +23,7 @@ class User() : Parcelable {
         parcel.writeString(image)
         parcel.writeString(email)
         parcel.writeString(token)
+        parcel.writeString(id)
     }
 
     override fun describeContents(): Int {

@@ -55,7 +55,9 @@ class UsersActivity : AppCompatActivity(), UserListener {
                         user.name = queryDocumentSnapshot.getString(constants.KEY_NAME)!!
                         user.email = queryDocumentSnapshot.getString(constants.KEY_EMAIL)!!
                         user.image = queryDocumentSnapshot.getString(constants.KEY_IMAGE)!!
+                        // Sim, so o token precisa do .toString, se tirar quebra, pq? Não sei
                         user.token = queryDocumentSnapshot.getString(constants.KEY_FCM_TOKEN).toString()
+                        user.id = queryDocumentSnapshot.id
                         users.add(user)
                     }
                     if (users.isNotEmpty()){

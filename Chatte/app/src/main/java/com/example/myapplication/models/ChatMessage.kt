@@ -1,8 +1,11 @@
 package com.example.myapplication.models
 
+import java.util.*
+
 class ChatMessage {
-    val senderId: String = ""
-    val receiverId: String = ""
-    val message: String = ""
-    val dateTime: String = ""
+    var senderId: String = ""
+    var receiverId: String = ""
+    var message: String = ""
+    var dateTime: String = ""
+    var dateObject = Date()
 }
