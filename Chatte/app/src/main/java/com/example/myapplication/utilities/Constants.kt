@@ -10,5 +10,6 @@ class Constants {
     val KEY_USER_ID: String = "userId"
     val KEY_IMAGE: String = "image"
     val KEY_FCM_TOKEN: String = "fcmToken"
+    val KEY_USER: String = "user"
 
 }
