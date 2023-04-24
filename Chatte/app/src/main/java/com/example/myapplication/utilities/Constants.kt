@@ -2,7 +2,7 @@ package com.example.myapplication.utilities
 
 class Constants {
     val KEY_COLLECTION_USERS: String = "users"
-    val KEY_NAME = "name"
+    val KEY_NAME: String = "name"
     val KEY_EMAIL: String = "email"
     val KEY_PASSWORD: String = "password"
     val KEY_PREFERENCE_NAME: String = "chatAppPreference"
@@ -16,5 +16,12 @@ class Constants {
     val KEY_RECEIVER_ID: String = "receiverId"
     val KEY_MESSAGE: String = "message"
     val KEY_TIMESTAMP: String = "timeStamp"
+    val KEY_COLLECTION_CONVERSATIONS: String = "conversations"
+    val KEY_SENDER_NAME: String = "senderName"
+    val KEY_RECEIVER_NAME: String = "receiverName"
+    val KEY_SENDER_IMAGE: String = "receiverImage"
+    val KEY_RECEIVER_IMAGE: String = "receiverImage"
+    val KEY_LAST_MESSAGE: String = "lastMessage"
+    val KEY_AVAILABILITY: String = "availability"
 
 }

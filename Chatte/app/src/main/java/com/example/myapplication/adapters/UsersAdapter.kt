@@ -5,7 +5,10 @@ import android.graphics.BitmapFactory
 import android.util.Base64
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.ImageView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.R
 import com.example.myapplication.databinding.ItemContainerUserBinding
 import com.example.myapplication.listeners.UserListener
 import com.example.myapplication.models.User
@@ -40,7 +43,7 @@ class UsersAdapter(private var users: List<User>, private var userListener: User
 
         private fun getUserImage(encodedImage: String): Bitmap {
             val bytes = Base64.decode(encodedImage, Base64.DEFAULT)
-            return BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
+            return BitmapFactory.decodeByteArray(bytes, 0, bytes.size)!!
         }
     }
 }

@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 
 
- class PreferenceManager {
+ class PreferenceManager() {
 
      private lateinit var sharedPreferences: SharedPreferences
     private val constants = Constants()

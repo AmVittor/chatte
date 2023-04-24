@@ -11,7 +11,6 @@ import com.example.myapplication.utilities.Constants
 import com.example.myapplication.utilities.PreferenceManager
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
-import java.util.Objects
 
 class SignInActivity : AppCompatActivity() {
 
@@ -27,7 +26,6 @@ class SignInActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-        //
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setListeners()
