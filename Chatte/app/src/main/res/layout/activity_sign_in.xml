@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_4sdp"
-            android:text="@string/fa_a_o_login_para_continuar"
+            android:text="@string/faca_o_login_para_continuar"
             android:textColor="@color/white"
             android:textSize="@dimen/_12ssp"/>
 

@@ -23,7 +23,7 @@
         android:layout_marginTop="@dimen/_4sdp"
         android:gravity="center"
         android:includeFontPadding="false"
-        android:text="Recebendo ligação"
+        android:text="@string/recebendo_ligacao"
         android:textStyle="bold"
         android:textColor="@color/primary"
         android:textSize="@dimen/_15ssp"

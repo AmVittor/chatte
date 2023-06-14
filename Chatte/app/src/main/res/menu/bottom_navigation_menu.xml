@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_forum"
+        android:icon="@drawable/icon_activity"
+        android:title="Forúm"
+        />
+
+    <item
+        android:id="@+id/bottom_chat"
+        android:icon="@drawable/icon_chat"
+        android:title="@string/conversas"/>
+
+    <item
+        android:id="@+id/bottom_squads"
+        android:icon="@drawable/icon_people"
+        android:title="@string/equipes"/>
+
+    <item
+        android:id="@+id/bottom_calendar"
+        android:icon="@drawable/icon_calendar"
+        android:title="@string/calendario"/>
+
+    <item
+        android:id="@+id/bottom_settings"
+        android:icon="@drawable/icon_settings"
+        android:title="@string/mais"/>
+
+</menu>

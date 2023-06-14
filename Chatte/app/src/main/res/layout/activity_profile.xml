@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/primary"
+    tools:context=".activities.ProfileActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        >
+
+
+        <ImageView
+            android:id="@+id/back_input"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/background_input"
+            android:backgroundTint="@color/white"
+            >
+
+        </ImageView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/background_input"
+            android:backgroundTint="@color/all_black"
+            android:layout_marginTop="110dp"
+            >
+
+
+        </ImageView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/background_input"
+            android:backgroundTint="@color/all_black"
+            android:layout_marginTop="405dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/boxText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="100dp"
+            >
+
+
+
+            <TextView
+                android:id="@+id/nomeSobrenome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nome_sobrenome"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/nomeCargo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cargo"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="italic"
+                android:layout_marginTop="5dp"
+                >
+
+            </TextView>
+
+        </LinearLayout>
+
+
+
+
+        <ImageButton
+            android:id="@+id/btDados"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/background_input"
+            android:layout_marginTop="130dp"
+            android:backgroundTint="@color/white">
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/nomeDados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dados_pessoais"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_marginTop="147dp"
+            android:layout_marginLeft="60dp">
+
+        </TextView>
+
+
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/background_input"
+            android:layout_marginTop="230dp"
+            android:backgroundTint="@color/white">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/nomeConfig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/configuracoes"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_marginTop="247dp"
+            android:layout_marginLeft="60dp">
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/background_input"
+            android:layout_marginTop="330dp"
+            android:backgroundTint="@color/white">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/nomeCanais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/canais"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_marginTop="347dp"
+            android:layout_marginLeft="60dp">
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/background_input"
+            android:layout_marginTop="430dp"
+            android:backgroundTint="@color/white">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/nomeComunidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comunidade"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_marginTop="447dp"
+            android:layout_marginLeft="60dp">
+
+        </TextView>
+
+
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        style="@style/ThemeOverlay.App.BottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/all_black"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_navigation_menu"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

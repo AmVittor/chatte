@@ -148,7 +148,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
-            android:text="Entrar na sua conta"
+            android:text="@string/entrar_na_sua_conta"
             android:textColor="@color/white"
             android:textSize="@dimen/_13sdp"
             android:textStyle="bold"/>

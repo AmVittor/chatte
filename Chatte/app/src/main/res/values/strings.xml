@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="bem_vindo_a_chatte">Bem vindo a Chatte!</string>
-    <string name="fa_a_o_login_para_continuar">Faça o login para continuar</string>
+    <string name="faca_o_login_para_continuar">Faça o login para continuar</string>
     <string name="email">Email</string>
-    <string name="password">Password</string>
+    <string name="password">Senha</string>
     <string name="entrar">Entrar</string>
     <string name="crie_uma_conta">Crie uma conta</string>
     <string name="crie_sua_conta">Crie sua conta</string>
@@ -12,4 +12,47 @@
     <string name="senha">senha</string>
     <string name="criar_conta">Criar conta</string>
     <string name="nome">Nome</string>
+
+    <string name="notes">Minhas Anotações</string>
+    <string name="notes_title">Titulo da Anotação</string>
+    <string name="notes_sub_title">Subtítulo da anotação</string>
+    <string name="notes_desc">Insira a anotação aqui</string>
+    <string name="web_url">Insira a URL da Web</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancelar</string>
+    <string name="storage_permission_text">Este aplicativo precisa de acesso ao seu armazenamento.</string>
+    <string name="search">Pesquise suas anotações</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="agenda">Agenda</string>
+    <string name="data">Data</string>
+    <string name="hora">Hora</string>
+    <string name="tarefa">Tarefa</string>
+    <string name="titulo">Titulo</string>
+    <string name="descricao_tarefa">Descrição Tarefa</string>
+    <string name="agendar">Agendar</string>
+    <string name="escreva_sua_mensagem">Escreva sua mensagem</string>
+    <string name="dados_pessoais">Dados Pessoais</string>
+    <string name="recebendo_ligacao">Recebendo ligação</string>
+    <string name="enviando_convite_para_reuniao">Enviando convite para reunião</string>
+    <string name="nome_sobrenome">Nome Sobrenome</string>
+    <string name="cargo">Cargo</string>
+    <string name="configuracoes">Configurações</string>
+    <string name="canais">Canais</string>
+    <string name="comunidade">Comunidade</string>
+    <string name="entrar_na_sua_conta">Entrar na sua conta</string>
+    <string name="selecione_usuario">Selecione o usuário</string>
+    <string name="selecione_uma_cor">Selecione uma Cor</string>
+    <string name="adicionar_web_link">Adicionar Link Web</string>
+    <string name="adicionar_url">Adicionar Link Web</string>
+    <string name="titulo_tarefa">Título tarefa</string>
+    <string name="descricao_da_tarefa">Descrição da Tarefa</string>
+    <string name="atividade">Atividade</string>
+    <string name="conversas">Conversas</string>
+    <string name="equipes">Equipes</string>
+    <string name="calendario">Calendário</string>
+    <string name="mais">Mais</string>
+    <string name="enviar_arquivo" translatable="false">Enviar Arquivo</string>
+    <string name="dialog_title_create_group" translatable="false" />
+    <string name="dialog_message_create_group" translatable="false" />
+    <string name="create" translatable="false" />
 </resources>

@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Base64
 import android.view.View
 import android.widget.Toast
+import com.example.myapplication.R
 import com.example.myapplication.adapters.RecentConversationsAdapter
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.listeners.ConversionListener
@@ -14,6 +15,7 @@ import com.example.myapplication.models.ChatMessage
 import com.example.myapplication.models.User
 import com.example.myapplication.utilities.Constants
 import com.example.myapplication.utilities.PreferenceManager
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.firestore.*
 import com.google.firebase.messaging.FirebaseMessaging
 
@@ -27,6 +29,7 @@ class MainActivity : BaseActivity(), ConversionListener {
     private lateinit var database: FirebaseFirestore
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -37,8 +40,44 @@ class MainActivity : BaseActivity(), ConversionListener {
         getToken()
         setListeners()
         listenConversations()
+
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNavigationView.selectedItemId = R.id.bottom_chat
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.bottom_chat -> true
+                R.id.bottom_calendar -> {
+                    startActivity(Intent(applicationContext, NoteMain::class.java))
+                    finish()
+                    true
+                }
+                R.id.bottom_forum -> {
+                    startActivity(Intent(applicationContext, ForumActivity::class.java))
+                    finish()
+                    true
+                }
+                R.id.bottom_squads -> {
+                    startActivity(Intent(applicationContext, GroupActivity::class.java))
+                    finish()
+                    true
+                }
+
+                R.id.bottom_settings -> {
+                    startActivity(Intent(applicationContext, EditUserActivity::class.java))
+                    finish()
+                    true
+                }
+                else -> false
+            }
+        }
+
     }
 
+    private fun navegate(nomeTela: String){
+        val intent = Intent(this, CallMainActivity::class.java)
+        intent.putExtra("telaCall", nomeTela)
+        startActivity(intent)
+    }
     private fun init() {
         conversations = mutableListOf()
         conversationsAdapter = RecentConversationsAdapter(conversations, this)
@@ -55,9 +94,9 @@ class MainActivity : BaseActivity(), ConversionListener {
 
     private fun loadUserDetails(){
         binding.textName.text = preferenceManager.getString(constant.KEY_NAME)
-        val bytes = Base64.decode(preferenceManager.getString(constant.KEY_IMAGE), Base64.DEFAULT)
-        val bitmap: Bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
-        binding.imageProfile.setImageBitmap(bitmap)
+         val bytes = Base64.decode(preferenceManager.getString(constant.KEY_IMAGE), Base64.DEFAULT)
+         val bitmap: Bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
+         binding.imageProfile.setImageBitmap(bitmap)
     }
 
     private fun showToast(message: String){
@@ -140,6 +179,7 @@ class MainActivity : BaseActivity(), ConversionListener {
     }
 
     private fun updateToken(token: String){
+        preferenceManager.putString(constant.KEY_FCM_TOKEN, token)
         val database: FirebaseFirestore = FirebaseFirestore.getInstance()
         val documentReference: DocumentReference = database.collection(constant.KEY_COLLECTION_USERS).document(
             preferenceManager.getString(constant.KEY_USER_ID)!!

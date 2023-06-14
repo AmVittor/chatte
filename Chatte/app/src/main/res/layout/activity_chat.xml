@@ -8,7 +8,12 @@
     android:background="@color/primary"
     tools:context=".activities.ChatActivity">
 
-    <View
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webView" />
+
+    <WebView
         android:id="@+id/viewBackground"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -25,7 +30,7 @@
         app:layout_constraintBottom_toTopOf="@id/viewSupporter"
         app:layout_constraintTop_toTopOf="parent"/>
     <ImageView
-        android:id="@+id/imageAudioMeeting"
+        android:id="@+id/callBtn"
         android:layout_width="@dimen/_30sdp"
         android:layout_height="@dimen/_30sdp"
         android:layout_marginTop="15dp"
@@ -99,6 +104,11 @@
         android:gravity="center"
         android:visibility="gone"/>
 
+    <TextView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/textName2"
+        android:visibility="invisible"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatRecyclerView"
@@ -112,7 +122,7 @@
         android:visibility="gone"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="@id/viewBackground"
-        app:layout_constraintTop_toBottomOf="@id/textAvailability"/>
+        app:layout_constraintTop_toBottomOf="@id/viewSupporter"/>
 
 
     <ProgressBar
@@ -135,7 +145,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        
+
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -146,17 +156,28 @@
             android:tint="@color/white"/>
     </FrameLayout>
 
+
+    <ImageView
+        android:id="@+id/sendFileBtn"
+        android:text="@string/enviar_arquivo"
+        android:src="@drawable/ic_clip"
+        android:layout_width="40dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/inputMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/all_black" />
     <EditText
         android:id="@+id/inputMessage"
         android:layout_width="0dp"
         android:layout_height="@dimen/_40sdp"
-        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_40sdp"
         android:layout_marginLeft="@dimen/_16sdp"
         android:layout_marginEnd="@dimen/_8sdp"
         android:layout_marginRight="@dimen/_8sdp"
         android:layout_marginBottom="@dimen/_12sdp"
         android:background="@drawable/background_input_digit"
-        android:hint="Escreva sua mensagem"
         android:imeOptions="actionDone"
         android:importantForAutofill="no"
         android:inputType="text"
@@ -168,4 +189,78 @@
         app:layout_constraintEnd_toStartOf="@id/layoutSend"
         app:layout_constraintStart_toStartOf="parent"/>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="64dp"
+        android:id="@+id/callControlLayout">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="#99000000"
+            android:padding="4dp"
+            android:src="@drawable/ic_baseline_videocam_24"
+            android:id="@+id/toggleVideoBtn"/>
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="4dp"
+            android:background="#99000000"
+            android:layout_marginStart="36dp"
+            android:id="@+id/toggleAudioBtn"
+            android:src="@drawable/ic_baseline_mic_24" />
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="4dp"
+            android:background="#99000000"
+            android:layout_marginStart="36dp"
+            android:id="@+id/toggleTurnOff"
+            android:src="@drawable/ic_baseline_call_end_24" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_400sdp"
+        android:id="@+id/callLayout"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Someone is calling..."
+            android:padding="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:id="@+id/incomingCallTxt" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_call_24"
+            android:id="@+id/acceptBtn"
+            android:layout_toStartOf="@id/rejectBtn"
+            android:padding="20dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_call_end_24"
+            android:id="@+id/rejectBtn"
+            android:padding="20dp"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

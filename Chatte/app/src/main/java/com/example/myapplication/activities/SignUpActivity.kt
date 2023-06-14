@@ -73,7 +73,7 @@ class SignUpActivity : AppCompatActivity() {
             startActivity(intent)
         }.addOnFailureListener {
             loading(false)
-            showToast("Erro ao realisar o login")
+            showToast("Erro ao realizar o login")
         }
     }
 

@@ -1,10 +1,10 @@
 package com.example.myapplication.activities
 
+import UsersAdapter
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.core.app.ActivityCompat
-import com.example.myapplication.adapters.UsersAdapter
 import com.example.myapplication.databinding.ActivityUsersBinding
 import com.example.myapplication.listeners.UserListener
 import com.example.myapplication.models.User

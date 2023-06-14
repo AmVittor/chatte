@@ -3,4 +3,11 @@
         <item name="colorPrimary">@color/primary</item>
         <item name="android:statusBarColor" tools:targetApi="21">@color/primary</item>
     </style>
+
+    <style name="ThemeOverlay.App.BottomNavigationView" parent="">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/yellow_footer</item>
+    </style>
+
+
 </resources>

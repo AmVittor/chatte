@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/all_black"
+    android:background="@drawable/background_input"
+    >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                tools:src="@mipmap/ic_launcher"
+                android:id="@+id/image_profile_post">
+            </ImageView>
+
+            <TextView
+                tools:text="AAAAAAAAAAAAAAA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/username"
+                android:layout_gravity="center_vertical"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_marginBottom="15dp"
+            android:id="@+id/image_post"
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            tools:src="@mipmap/ic_launcher"
+            android:layout_marginLeft="35dp">
+
+        </ImageView>
+
+        <TextView
+            tools:text="AAAAAAAAAAAAAAA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:id="@+id/description"
+            android:textColor="@color/white">
+
+        </TextView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

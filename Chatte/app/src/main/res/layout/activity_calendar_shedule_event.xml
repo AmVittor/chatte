@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CalendarSheduleEventActivity"
+    android:background="@color/primary"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/vtAgenda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_baseline_arrow_back_24"
+                tools:ignore="TouchTargetSizeCheck">
+
+            </ImageButton>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/agenda"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginLeft="10dp"
+                android:textSize="15sp">
+
+            </TextView>
+
+        </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/data"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:layout_marginLeft="150dp">
+
+        </TextView>
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:background="@drawable/background_input"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:layout_marginTop="15dp">
+
+        </DatePicker>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hora"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="15dp">
+
+        </TextView>
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:background="@drawable/background_input"
+            android:calendarViewShown="false"
+            android:timePickerMode="spinner"
+            android:layout_marginTop="15dp">
+
+        </TimePicker>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tarefa"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="15dp">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/etTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background_input"
+            android:hint="@string/titulo"
+            android:padding="10dp">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/etTarefa"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background_input"
+            android:hint="@string/descricao_tarefa"
+            android:padding="10dp">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/btAgendar"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="@string/agendar"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:backgroundTint="@color/pink_round_add"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="50dp"
+            >
+
+        </Button>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
