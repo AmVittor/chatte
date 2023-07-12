@@ -12,7 +12,15 @@ Esse projeto tem como ideia juntar tudo aquilo que for prático e necessário pa
 - Anotações
 - Fórum
 - Integração com banco de dados Firebase
+## Aprendizados
 
+Este projeto fez com que eu aprendesse um pouco de cada área além do desenvolvimento, tanto para a parte de criação do servidor para hostear as chamadas de voz e vídeo quanto levamentamento de requisitos, ajustes de tarefas e prioridades, sustentação e o trabalho em equipe.
+## Como funciona?
+O aplicativo possui 2 principais pilares, o primeiro sendo o banco de dados firebase que é responsável por armazenar todo o funcionamento do app, desde as mensagens até a conta do usuário, e o segundo sendo o servidor local que é responsável por hospedar as chamadas de voz e vídeo, tendo esses dois configurados será possível executar sem problemas o aplicativo. 
+### Chamada de voz e vídeo
+As chamadas de voz e vídeo são feitas via WebRTC O WebRTC (Web Real-Time Communication) é uma tecnologia de comunicação em tempo real desenvolvida para permitir a troca de dados, voz e vídeo diretamente entre navegadores da web, sem a necessidade de plugins ou software adicional. Ele fornece uma maneira fácil e segura de estabelecer conexões ponto a ponto em tempo real por meio da internet.
+### Mensageria
+A mensageria usando o Firebase Google é uma forma conveniente e eficiente de implementar recursos de troca de mensagens em tempo real em aplicativos. O Firebase é uma plataforma de desenvolvimento de aplicativos móveis e web que oferece uma variedade de serviços, incluindo autenticação, armazenamento em nuvem, banco de dados em tempo real e mensagens em nuvem.
 ## Documentação de cores
 
 | Cor               | Hexadecimal                                                      |
@@ -26,7 +34,5 @@ Esse projeto tem como ideia juntar tudo aquilo que for prático e necessário pa
 | Status ocupado    | ![#D72638](https://via.placeholder.com/10/D72638?text=+) #D72638 |
 
 
-## Aprendizados
 
-Este projeto fez com que eu aprendesse um pouco de cada área além do desenvolvimento, tanto para a parte de criação do servidor para hostear as chamadas de voz e vídeo quanto levamentamento de requisitos, ajustes de tarefas e prioridades, sustentação e o trabalho em equipe.
 
