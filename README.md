@@ -4,10 +4,13 @@
 Tudo, em todo lugar e ao mesmo tempo
 
 ## Objetivo
-Esse projeto tem como ideia juntar tudo aquilo que for prático e necessário para um ambiente de trabalho, seja para conversar usando os chats de texto ou chamadas de voz e video, a Chatte se adapta aquilo que o usuário tem como necessidade além das funcionalidades de chamada e chat a Chatte oferece também a opção de notas para caso necessite anotar alto em meio a uma reunião ou lembre de algo importante, e trazendo como diferencial o fórum, que seria uma rede social interna da empresa, que pode ser usada como bem entender, seja para avisos ou descontração, a Chatte faz tudo, na palma da sua mão e a um clique.
-## Funcionalidades.
+Este projeto, denominado Chatte, tem como objetivo proporcionar um ambiente de trabalho completo e eficiente. Ele reúne uma variedade de recursos práticos e essenciais, abrangendo desde a comunicação por meio de chats de texto até chamadas de voz e vídeo. A principal característica da Chatte é sua capacidade de se adaptar às necessidades individuais dos usuários.
 
-- Chat de text
+Além das funcionalidades de chamada e chat, a Chatte também oferece a conveniência de criar e gerenciar notas durante reuniões ou para lembrar informações importantes. O diferencial desta plataforma é o fórum interno da empresa, que serve como uma rede social interna flexível. Este recurso pode ser aproveitado para diversos fins, desde compartilhar anúncios até promover um ambiente descontraído.
+
+Com a Chatte, todas essas funcionalidades estão ao alcance dos usuários na palma de suas mãos, a apenas um clique de distância.
+
+- Chat de texto
 - Chamadas de voz e vídeo
 - Anotações
 - Fórum
