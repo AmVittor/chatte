@@ -3,6 +3,7 @@
 
 Tudo, em todo lugar e ao mesmo tempo
 
+API mensageria: https://github.com/AmVittor/api-mensageria
 ## Objetivo
 Este projeto, denominado Chatte, tem como objetivo proporcionar um ambiente de trabalho completo e eficiente. Ele reúne uma variedade de recursos práticos e essenciais, abrangendo desde a comunicação por meio de chats de texto até chamadas de voz e vídeo. A principal característica da Chatte é sua capacidade de se adaptar às necessidades individuais dos usuários.
 
